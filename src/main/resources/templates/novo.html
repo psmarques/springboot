@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Novo Evento</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div>
+
+    <form action="#" th:action="@{/eventos/novo}" th:object="${evento}" method="post">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" th:field="*{nome}" id="nome" placeholder="Nome">
+        </div>
+        <div>
+            <label for="descricao">Descrição:</label>
+            <input type="text" th:field="*{descricao}" id="descricao" placeholder="Descrição">
+        </div>
+        <div>
+            <input type="submit" value="Salvar">
+            <input type="button" value="Voltar" onclick="window.location.url = '/eventos/lista'">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
